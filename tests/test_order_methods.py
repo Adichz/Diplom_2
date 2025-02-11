@@ -1,5 +1,8 @@
 import allure
-from method import OrderMethods
+
+import data
+from method.order_methods import OrderMethods
+from data import ERROR_MSG
 
 @allure.feature('Класс тестирования создания заказов.')
 class TestOrders:
@@ -17,7 +20,7 @@ class TestOrders:
     @allure.title('Создаем заказ авторизированным пользователем с неверным хешем ингредиентов. Ожидаем ответ = 500')
     def test_create_order_wrong_ingredients(self):
         new_order = OrderMethods.create_order_wrong_ingredients()
-        assert new_order.status_code == 500
+        assert new_order.status_code == 500 and new_order.text == data.ERROR_MSG
 
     @allure.title('Создаем заказ не авторизированным пользователем с ингредиентами. Ожидаем ответ = 200, True')
     def test_create_order_no_auth(self):

@@ -2,7 +2,7 @@ import allure
 
 
 from data import gen_payload
-from method import UserMethods
+from method.user_methods import UserMethods
 
 @allure.feature('Класс тестирования создания пользователя.')
 class TestUser:

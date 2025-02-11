@@ -9,6 +9,7 @@ LOGIN_URL = 'auth/login'
 LOGOUT_URL = 'auth/logout'
 GET_ORDER_URL = 'orders/all'
 GET_USER_URL = 'auth/user'
+ERROR_MSG = '<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<title>Error</title>\n</head>\n<body>\n<pre>Internal Server Error</pre>\n</body>\n</html>\n'
 
 
 

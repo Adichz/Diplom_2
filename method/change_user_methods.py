@@ -1,5 +1,5 @@
 import requests
-
+import allure
 from data import BASE_URL, GET_USER_URL, gen_payload
 from method.login_methods import LoginMethods
 
@@ -7,6 +7,7 @@ from method.login_methods import LoginMethods
 class ChangeUser:
 
     @staticmethod
+    @allure.step('Меняем данные с авторизацией')
     def change_user_with_auth():
         payload = gen_payload()
         log = LoginMethods.login_user()
@@ -15,6 +16,7 @@ class ChangeUser:
         return user
 
     @staticmethod
+    @allure.step('Меняем данные без авторизации')
     def change_user_no_auth():
         payload = gen_payload()
         LoginMethods.login_user()

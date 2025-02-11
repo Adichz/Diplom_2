@@ -1,5 +1,5 @@
 import allure
-from method import OrderMethods
+from method.order_methods import OrderMethods
 
 @allure.feature('Класс тестирования получения заказа.')
 class TestGetUserOrder:
